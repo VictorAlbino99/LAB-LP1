@@ -14,10 +14,12 @@ class Data01
         Data();
         Data(int dia, int mes, int ano);
 
-        /// Metodos
+        /// Metodos get
         int  getDia();
         int  getMes();
         int  getAno();
+
+        /// Metodos set
         void setDia(int dia);
         void setMes(int mes);
         void setAno(int ano);
