@@ -3,27 +3,28 @@
 
 #include <iostream>
 
-using namespace std;
-
 class Invoice
 {
     private:
-        int    numero;
-        int    qtde;
-        double preco;
-        string descricao;
+
+        int         n;
+        int         q;
+        double      p;
+        std::string d;
 
     public:
-        invoice(int numero, int qtde, double preco, string descricao);
-        int    getNumero();
-        int    getQtde();
-        double getPreco();
-        string getDescricao();
-        double getInvoiceAmount();
-        void   setNumero(int numItem);
-        void   setQtde(int qItem);
-        void   setPreco(double precoItem);
-        void   setDescricao(string descricao);
-} ;
+
+        Invoice(int n, int q, double p, std::string d);
+        int         getNumero();
+        int         getQuantidade();
+        double      getPreco();
+        std::string getDescricao();
+        double      getInvoiceAmount();
+        void        setNumero(int n);
+        void        setQuantidade(int q);
+        void        setPreco(double p);
+        void        setDescricao(std::string d);
+
+};
 
 #endif // INVOICE_H

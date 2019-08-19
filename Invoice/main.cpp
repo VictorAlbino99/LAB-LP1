@@ -1,24 +1,25 @@
 #include <iostream>
 #include <stdio.h>
+
 #include "Invoice.h"
 
 using namespace std;
 
-int main()
+int main(void)
 {
-    Invoice *Item = new Invoice(100, 3, 5.30,"Feijao Preto");
+    Invoice *f1 = new Invoice(7,7,50,"CAMISA POLO");
 
-    cout << "Numero: "      << Item->getNumero()        << "\nQuantidade: "  << Item->getQtde()      << endl;
-    cout << "Preco: "       << Item->getPreco()         << "\nDescricao:  "  << Item->getDescricao() << endl;
-    cout << "Preco final: " << Item->getInvoiceAmount() << endl << endl;
+    cout << "NUMERO:        " << f1->getNumero() << "\nQUANTIDADE:    " << f1 -> getQuantidade() << endl;
+    cout << "PRECO INICIAL: " << f1->getPreco() << "\nDESCRICAO:     " << f1 -> getDescricao() << endl;
+    cout << "\PRECO FINAL:   " << f1->getInvoiceAmount() << endl << endl;
 
-    Item->setNumero(7);
-    Item->setQtde(-1);
-    Item->setPreco(-2);
-    Item->setDescricao("Descricao");
+    f1->setNumero(77);
+    f1->setQuantidade(-1);
+    f1->setPreco(-1);
+    f1->setDescricao("CASACO");
 
-    cout << "Numero: "   << Item->getNumero() << "\nQuantidade: " << Item->getQtde()      << endl;
-    cout << "Preco: "    << Item->getPreco()  << "\nDescricao: "  << Item->getDescricao() << endl;
+    cout << "NUMERO:        " << f1->getNumero() << "\nQUANTIDADE:    " << f1->getQuantidade() << endl;
+    cout << "PRECO:         " << f1->getPreco() << "\nDESCRICAO:     " << f1->getDescricao() << endl;
 
-    delete(Item);
+    delete(f1);
 }

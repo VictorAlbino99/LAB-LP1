@@ -1,101 +1,74 @@
-#include <iostream>
 #include "Invoice.h"
+#include <iostream>
 
-Invoice::Invoice(int numero, int qtde, double preco, string descricao)
+using namespace std;
+
+Invoice::Invoice(int n, int q, double p, string d)
 {
-    setNumero(numero);
-    setQtde(qtde);
-    setPreco(preco);
-    setDescricao(descricao);
+    setNumero(n);
+    setQuantidade(q);
+    setPreco(p);
+    setDescricao(d);
 }
-
-
-
 
 int Invoice::getNumero()
 {
-    return numero;
+    return n;
 }
 
-
-
-
-
-int Invoice::getQtde()
+int Invoice::getQuantidade()
 {
-    return qtde;
+    return q;
 }
-
-
-
 
 double Invoice::getPreco()
 {
-    return preco;
+    return p;
 }
-
-
-
 
 string Invoice::getDescricao()
 {
-    return descricao;
+    return d;
 }
-
-
-
 
 double Invoice::getInvoiceAmount()
 {
-    return qtde * preco;
+    return q * p;
 }
 
-
-
-
-void Invoice::setNumero(int numero)
+void Invoice::setNumero(int n)
 {
-    this -> numero = numero;
+    this -> n = n;
 }
 
-
-
-
-void Invoice::setQtde(int qtde)
+void Invoice::setQuantidade(int q)
 {
-    if(qtde < 1)
+    if(q < 1)
     {
-        this -> qtde = 0;
+       this -> q = 0;
     }
 
     else
     {
-        this -> qtde = qtde;
+       this -> q = q;
     }
 
 }
 
-
-
-
-void Invoice::setPreco(double preco)
+void Invoice::setPreco(double p)
 {
-    if(preco < 1)
+    if(p < 1)
     {
-        this -> preco = 0;
+        this -> p = 0;
     }
 
     else
     {
-        this -> preco = preco;
+        this -> p = p;
     }
-
 }
 
-
-
-
-void Invoice::setDescricao(string descricao)
+void Invoice::setDescricao(string d)
 {
-    this -> descricao = descricao;
+    this -> d = d;
 }
